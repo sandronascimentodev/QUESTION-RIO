@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Satisfação & NPS | Sandro Graphic Design</title>
+  <meta name="description" content="Formulário oficial de avaliação de satisfação e NPS dos serviços de Design Gráfico, UI/UX e Edição de Vídeo da Sandro Graphic Design.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="IMGS/icon logo branco com cor.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glow & Curved Halo Effect -->
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow-purple" aria-hidden="true"></div>
+  <div class="ambient-glow-magenta" aria-hidden="true"></div>
+
+  <!-- Page Container -->
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="brand-container">
+        <img src="IMGS/logo_branco.png" alt="Sandro Graphic Design Logo" class="brand-logo">
+      </div>
+      <div class="header-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">Pesquisa de Satisfação & NPS</span>
+      </div>
+    </header>
+
+    <!-- Hero / Title Section -->
+    <section class="hero-section">
+      <h1 class="hero-title">Sua opinião transforma <span class="text-gradient">nosso design.</span></h1>
+      <p class="hero-subtitle">
+        Sua avaliação leva menos de <strong>2 minutos</strong> e é fundamental para continuarmos aprimorando a qualidade, agilidade e excelência dos nossos projetos.
+      </p>
+    </section>
+
+    <!-- Main Questionnaire Card -->
+    <main class="questionnaire-card" id="questionnaire-card">
+      <form id="nps-form" action="https://formsubmit.co/sandrographicdesign@gmail.com" method="POST">
+        
+        <!-- FormSubmit Config Hidden Fields -->
+        <input type="hidden" name="_subject" value="Novo Feedback de Design Recebido! - Sandro Graphic Design">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Step 1: Cliente / Empresa -->
+        <div class="form-group" id="group-cliente">
+          <div class="form-group-header">
+            <span class="group-number">01</span>
+            <label for="cliente_nome" class="form-label">
+              Nome da empresa / Cliente solicitante <span class="required-star">*</span>
+            </label>
+          </div>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="cliente_nome" 
+              name="empresa" 
+              class="form-input" 
+              placeholder="Digite o seu nome ou o nome da sua empresa..." 
+              required
+              autocomplete="off"
+            >
+            <span class="input-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </span>
+          </div>
+          <span class="error-message" id="error-cliente_nome">Por favor, informe seu nome ou o nome da empresa.</span>
+        </div>
+
+        <!-- Step 2: Satisfação Geral -->
+        <div class="form-group" id="group-q1">
+          <div class="form-group-header">
+            <span class="group-number">02</span>
+            <div class="question-info">
+              <h2 class="question-title">O quanto você gostou do serviço entregue? <span class="required-star">*</span></h2>
+              <p class="question-desc">Avalie a qualidade estética, acabamento e execução técnica geral.</p>
+            </div>
+          </div>
+          <div class="rating-scale-wrapper">
+            <div class="rating-scale" data-name="nota_geral">
+              <label class="rating-pill" data-value="1"><input type="radio" name="nota_geral" value="1" required><span>1</span></label>
+              <label class="rating-pill" data-value="2"><input type="radio" name="nota_geral" value="2"><span>2</span></label>
+              <label class="rating-pill" data-value="3"><input type="radio" name="nota_geral" value="3"><span>3</span></label>
+              <label class="rating-pill" data-value="4"><input type="radio" name="nota_geral" value="4"><span>4</span></label>
+              <label class="rating-pill" data-value="5"><input type="radio" name="nota_geral" value="5"><span>5</span></label>
+              <label class="rating-pill" data-value="6"><input type="radio" name="nota_geral" value="6"><span>6</span></label>
+              <label class="rating-pill" data-value="7"><input type="radio" name="nota_geral" value="7"><span>7</span></label>
+              <label class="rating-pill" data-value="8"><input type="radio" name="nota_geral" value="8"><span>8</span></label>
+              <label class="rating-pill" data-value="9"><input type="radio" name="nota_geral" value="9"><span>9</span></label>
+              <label class="rating-pill" data-value="10"><input type="radio" name="nota_geral" value="10"><span>10</span></label>
+            </div>
+            <div class="scale-labels">
+              <span>Insatisfeito</span>
+              <span>Totalmente Satisfeito</span>
+            </div>
+          </div>
+          <span class="error-message" id="error-nota_geral">Por favor, selecione uma nota de 1 a 10.</span>
+        </div>
+
+        <!-- Step 3: Resolução de Demanda -->
+        <div class="form-group" id="group-q2">
+          <div class="form-group-header">
+            <span class="group-number">03</span>
+            <div class="question-info">
+              <h2 class="question-title">O quanto conseguimos resolver o seu problema? <span class="required-star">*</span></h2>
+              <p class="question-desc">Considere o alinhamento com o briefing, cumprimento de objetivo e solução proposta.</p>
+            </div>
+          </div>
+          <div class="rating-scale-wrapper">
+            <div class="rating-scale" data-name="nota_resolucao">
+              <label class="rating-pill" data-value="1"><input type="radio" name="nota_resolucao" value="1" required><span>1</span></label>
+              <label class="rating-pill" data-value="2"><input type="radio" name="nota_resolucao" value="2"><span>2</span></label>
+              <label class="rating-pill" data-value="3"><input type="radio" name="nota_resolucao" value="3"><span>3</span></label>
+              <label class="rating-pill" data-value="4"><input type="radio" name="nota_resolucao" value="4"><span>4</span></label>
+              <label class="rating-pill" data-value="5"><input type="radio" name="nota_resolucao" value="5"><span>5</span></label>
+              <label class="rating-pill" data-value="6"><input type="radio" name="nota_resolucao" value="6"><span>6</span></label>
+              <label class="rating-pill" data-value="7"><input type="radio" name="nota_resolucao" value="7"><span>7</span></label>
+              <label class="rating-pill" data-value="8"><input type="radio" name="nota_resolucao" value="8"><span>8</span></label>
+              <label class="rating-pill" data-value="9"><input type="radio" name="nota_resolucao" value="9"><span>9</span></label>
+              <label class="rating-pill" data-value="10"><input type="radio" name="nota_resolucao" value="10"><span>10</span></label>
+            </div>
+            <div class="scale-labels">
+              <span>Pouco resolveu</span>
+              <span>Resolveu Perfeitamente</span>
+            </div>
+          </div>
+          <span class="error-message" id="error-nota_resolucao">Por favor, selecione uma nota de 1 a 10.</span>
+        </div>
+
+        <!-- Step 4: Net Promoter Score (NPS) -->
+        <div class="form-group" id="group-q3">
+          <div class="form-group-header">
+            <span class="group-number">04</span>
+            <div class="question-info">
+              <h2 class="question-title">O quanto você recomendaria nossos serviços para outra empresa ou colega? <span class="required-star">*</span></h2>
+              <p class="question-desc">Esta é a métrica NPS oficial (Net Promoter Score).</p>
+            </div>
+          </div>
+          <div class="rating-scale-wrapper">
+            <div class="rating-scale nps-scale" data-name="nota_nps">
+              <!-- Detratores (1-6) -->
+              <label class="rating-pill detractor" data-value="1"><input type="radio" name="nota_nps" value="1" required><span>1</span></label>
+              <label class="rating-pill detractor" data-value="2"><input type="radio" name="nota_nps" value="2"><span>2</span></label>
+              <label class="rating-pill detractor" data-value="3"><input type="radio" name="nota_nps" value="3"><span>3</span></label>
+              <label class="rating-pill detractor" data-value="4"><input type="radio" name="nota_nps" value="4"><span>4</span></label>
+              <label class="rating-pill detractor" data-value="5"><input type="radio" name="nota_nps" value="5"><span>5</span></label>
+              <label class="rating-pill detractor" data-value="6"><input type="radio" name="nota_nps" value="6"><span>6</span></label>
+              <!-- Neutros (7-8) -->
+              <label class="rating-pill neutral" data-value="7"><input type="radio" name="nota_nps" value="7"><span>7</span></label>
+              <label class="rating-pill neutral" data-value="8"><input type="radio" name="nota_nps" value="8"><span>8</span></label>
+              <!-- Promotores (9-10) -->
+              <label class="rating-pill promoter" data-value="9"><input type="radio" name="nota_nps" value="9"><span>9</span></label>
+              <label class="rating-pill promoter" data-value="10"><input type="radio" name="nota_nps" value="10"><span>10</span></label>
+            </div>
+            <div class="nps-legend-bar">
+              <div class="legend-item detractor-text">
+                <span class="legend-dot"></span> 1 - 6: Pouco Provável
+              </div>
+              <div class="legend-item neutral-text">
+                <span class="legend-dot"></span> 7 - 8: Neutro
+              </div>
+              <div class="legend-item promoter-text">
+                <span class="legend-dot"></span> 9 - 10: Muito Provável
+              </div>
+            </div>
+          </div>
+          <span class="error-message" id="error-nota_nps">Por favor, selecione uma nota de 1 a 10.</span>
+        </div>
+
+        <!-- Step 5: Fidelização e Recorrência -->
+        <div class="form-group" id="group-q4">
+          <div class="form-group-header">
+            <span class="group-number">05</span>
+            <div class="question-info">
+              <h2 class="question-title">Qual a probabilidade de você solicitar nossos serviços novamente? <span class="required-star">*</span></h2>
+              <p class="question-desc">Para novos projetos de Design Gráfico, UI/UX ou Edição de Vídeo.</p>
+            </div>
+          </div>
+          <div class="rating-scale-wrapper">
+            <div class="rating-scale" data-name="nota_recorrencia">
+              <label class="rating-pill" data-value="1"><input type="radio" name="nota_recorrencia" value="1" required><span>1</span></label>
+              <label class="rating-pill" data-value="2"><input type="radio" name="nota_recorrencia" value="2"><span>2</span></label>
+              <label class="rating-pill" data-value="3"><input type="radio" name="nota_recorrencia" value="3"><span>3</span></label>
+              <label class="rating-pill" data-value="4"><input type="radio" name="nota_recorrencia" value="4"><span>4</span></label>
+              <label class="rating-pill" data-value="5"><input type="radio" name="nota_recorrencia" value="5"><span>5</span></label>
+              <label class="rating-pill" data-value="6"><input type="radio" name="nota_recorrencia" value="6"><span>6</span></label>
+              <label class="rating-pill" data-value="7"><input type="radio" name="nota_recorrencia" value="7"><span>7</span></label>
+              <label class="rating-pill" data-value="8"><input type="radio" name="nota_recorrencia" value="8"><span>8</span></label>
+              <label class="rating-pill" data-value="9"><input type="radio" name="nota_recorrencia" value="9"><span>9</span></label>
+              <label class="rating-pill" data-value="10"><input type="radio" name="nota_recorrencia" value="10"><span>10</span></label>
+            </div>
+            <div class="scale-labels">
+              <span>Improvável</span>
+              <span>Com Certeza</span>
+            </div>
+          </div>
+          <span class="error-message" id="error-nota_recorrencia">Por favor, selecione uma nota de 1 a 10.</span>
+        </div>
+
+        <!-- Step 6: Feedback Aberto -->
+        <div class="form-group" id="group-q5">
+          <div class="form-group-header">
+            <span class="group-number">06</span>
+            <div class="question-info">
+              <h2 class="question-title">Deseja deixar algum comentário adicional, sugestão de melhoria ou elogio?</h2>
+              <p class="question-desc">Seu comentário é livre e opcional, mas faz toda a diferença para nós.</p>
+            </div>
+          </div>
+          <div class="textarea-wrapper">
+            <textarea 
+              name="feedback_aberto" 
+              id="comentario_feedback" 
+              class="form-textarea" 
+              rows="4" 
+              placeholder="Escreva aqui suas observações, sugestões ou elogios..."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Form Submit Bar -->
+        <div class="form-actions">
+          <div class="submit-info">
+            <span class="lock-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </span>
+            <span>Envio 100% seguro direto para a nossa equipe.</span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <span class="btn-text">Enviar Avaliação</span>
+            <span class="btn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>© 2026 Sandro Graphic Design. Criatividade + Inovação.</p>
+      <div class="footer-links">
+        <a href="https://instagram.com/sandrographicdesign" target="_blank" rel="noopener" class="footer-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          @sandrographicdesign
+        </a>
+        <span class="footer-divider">•</span>
+        <a href="https://wa.me/5569993394554" target="_blank" rel="noopener" class="footer-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +55 69 9 9339-4554
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Success Modal Card -->
+  <div class="modal-overlay" id="success-modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-glow"></div>
+      
+      <div class="modal-icon-container">
+        <div class="modal-icon-pulse"></div>
+        <div class="modal-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+      </div>
+
+      <h2 id="modal-title" class="modal-title">Obrigado pelo seu feedback!</h2>
+      <p class="modal-desc">
+        Sua avaliação foi enviada com sucesso para a equipe da <strong>Sandro Graphic Design</strong>. Seu depoimento é fundamental para continuarmos evoluindo!
+      </p>
+
+      <div class="modal-details" id="modal-summary">
+        <!-- JS populated summary -->
+      </div>
+
+      <button type="button" class="modal-btn" id="modal-close-btn">
+        <span>Concluir</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
